@@ -2,9 +2,8 @@ services:
   - type: web
     name: vue-music-player
     env: static
-    buildCommand: echo "Using pre-built dist folder - no build needed"
+    buildCommand: cp package-minimal.json package.json && npm install && npm start
     staticPublishPath: ./dist
-    skipInstall: true
     headers:
       - path: /*
         name: Cache-Control

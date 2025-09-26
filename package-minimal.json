@@ -1,0 +1,17 @@
+{
+  "name": "vue-music-webapp",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "start": "npx serve dist -p $PORT"
+  },
+  "dependencies": {
+    "serve": "^14.2.5"
+  },
+  "engines": {
+    "node": ">= 18.0.0",
+    "npm": ">= 8.0.0"
+  }
+}
