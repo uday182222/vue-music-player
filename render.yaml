@@ -2,8 +2,9 @@ services:
   - type: web
     name: vue-music-player
     env: static
-    buildCommand: echo "Using pre-built dist folder"
+    buildCommand: echo "Using pre-built dist folder - no build needed"
     staticPublishPath: ./dist
+    skipInstall: true
     headers:
       - path: /*
         name: Cache-Control
