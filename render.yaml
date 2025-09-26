@@ -2,7 +2,7 @@ services:
   - type: web
     name: vue-music-player
     env: static
-    buildCommand: npm install --legacy-peer-deps && npm run build
+    buildCommand: echo "Using pre-built dist folder"
     staticPublishPath: ./dist
     headers:
       - path: /*
