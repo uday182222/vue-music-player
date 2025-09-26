@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: vue-music-player
+    env: static
+    buildCommand: echo "Using pre-built dist folder"
+    staticPublishPath: ./dist
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=31536000
+      - path: /static/*
+        name: Cache-Control
+        value: public, max-age=31536000
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
