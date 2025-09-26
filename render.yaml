@@ -2,8 +2,9 @@ services:
   - type: web
     name: vue-music-player
     env: static
-    buildCommand: echo "Using pre-built dist folder"
+    buildCommand: npm install --legacy-peer-deps && npm run build
     staticPublishPath: ./dist
+    nodeVersion: 18
     headers:
       - path: /*
         name: Cache-Control
