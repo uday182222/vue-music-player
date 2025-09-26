@@ -4,7 +4,6 @@ services:
     env: static
     buildCommand: npm install --legacy-peer-deps && npm run build
     staticPublishPath: ./dist
-    node: 18
     headers:
       - path: /*
         name: Cache-Control
